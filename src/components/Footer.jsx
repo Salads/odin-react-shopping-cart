@@ -1,6 +1,10 @@
 
 function Footer() {
-	return <p>Footer</p>
+	return (
+		<div className="bg-zinc-400">
+			<p>Footer</p>
+		</div>
+	);
 }
 
 export default Footer;

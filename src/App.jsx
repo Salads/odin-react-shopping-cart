@@ -8,11 +8,13 @@ import Footer from './components/Footer.jsx';
 function App() {
 
   return (
-    <>
+    <div className='flex flex-col w-full min-h-dvh bg-zinc-200 px-8'>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className='flex flex-col flex-1 bg-purple-50'>
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 
