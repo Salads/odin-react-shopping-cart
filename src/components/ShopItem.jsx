@@ -13,7 +13,7 @@ function ShopItem({data}) {
 			bg-white
 			gap-4
 		`}>
-			<img src={data.image} className='size-48 object-contain'/>
+			<img src={data.image} className='h-48 w-auto'/>
 			<p className='text-center'>{data.title}</p>
 			<div className='flex flex-row justify-around w-full'>
 				<div className='flex flex-row gap-1'>
