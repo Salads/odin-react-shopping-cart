@@ -24,7 +24,7 @@ function ShopItem({data}) {
 				<p>{data.category}</p>
 			</div>
 			<div className='flex-1'>
-				<p className='mb-6 line-clamp-4'>{data.description}</p>
+				<p className='mb-6 line-clamp-4' title={data.description}>{data.description}</p>
 			</div>
 			<div className='flex flex-row items-end justify-between w-full'>
 				<p className='self-center'>${data.price}</p>
