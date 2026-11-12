@@ -23,8 +23,10 @@ function ShopItem({data}) {
 				</div>
 				<p>{data.category}</p>
 			</div>
-			<p className='flex-1 mb-6 max-h-48 overflow-clip'>{data.description}</p>
-			<div className='flex flex-row justify-between w-full'>
+			<div className='flex-1'>
+				<p className='mb-6 line-clamp-4'>{data.description}</p>
+			</div>
+			<div className='flex flex-row items-end justify-between w-full'>
 				<p className='self-center'>${data.price}</p>
 				<div className='flex flex-col'>
 					<p>Quantity Here</p>
