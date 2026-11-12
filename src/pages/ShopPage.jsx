@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router';
 import ShopItem from '../components/ShopItem.jsx';
 
 function generateStoreItem(productData) {
-	return <ShopItem data={productData}/>
+	return <ShopItem key={productData.id} data={productData}/>
 }
 
 function ShopPage(props) {
