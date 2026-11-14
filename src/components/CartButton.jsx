@@ -21,7 +21,8 @@ function CartButton(props){
 	}
 
 	return (
-		<Link to="cart" className='relative inline-block'>
+
+		<Link to="cart" className='relative nav-underline'>
 			<img src={cartSVG} className='size-6' />
 			{notiSticker}
 		</Link>
