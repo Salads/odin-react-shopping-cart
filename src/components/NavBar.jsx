@@ -1,16 +1,18 @@
 import { Link } from "react-router";
 
-function NavBar() {
+import CartButton from './CartButton.jsx';
+
+function NavBar(props) {
 	
 	return (
-		<div className="flex justify-between bg-zinc-400">
+		<div className="flex justify-between p-3 sticky top-0 bg-zinc-400">
 			<div className="flex gap-8">
 				<Link to="/">Home</Link>
 				<Link to="shop">Shop</Link>
 				
 			</div>
 			<div className="flex gap-8">
-				<Link to="cart">Cart</Link>
+				<CartButton totalCartItems={props.totalCartItems}/>
 				<button>Toggle Theme</button>
 			</div>
 		</div>
