@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import ItemCartButton from './ItemCartButton.jsx';
 
 import ratingStar from '../assets/star-svgrepo-com.svg';
 
-function ShopItem({data}) {
+function ShopItem({productData, quantity, cartCallbacks}) {
 
 	return (
 		<div className={`
@@ -12,26 +13,27 @@ function ShopItem({data}) {
 			px-8 py-4
 			bg-white
 			gap-4
-		`}>
-			<img src={data.image} className='h-48 w-auto'/>
-			<p className='text-center'>{data.title}</p>
+		`} data-id={productData.id}>
+			<img src={productData.image} className='h-48 w-auto'/>
+			<p className='text-center'>{productData.title}</p>
 			<div className='flex flex-row justify-around w-full'>
 				<div className='flex flex-row gap-1'>
 					<img src={ratingStar} className='size-4 self-center'/>
-					<p>{data.rating.rate}</p>
-					<p>({data.rating.count})</p>
+					<p>{productData.rating.rate}</p>
+					<p>({productData.rating.count})</p>
 				</div>
-				<p>{data.category}</p>
+				<p>{productData.category}</p>
 			</div>
 			<div className='flex-1'>
-				<p className='mb-6 line-clamp-4' title={data.description}>{data.description}</p>
+				<p className='mb-6 line-clamp-4' title={productData.description}>{productData.description}</p>
 			</div>
 			<div className='flex flex-row items-end justify-between w-full'>
-				<p className='self-center'>${data.price}</p>
-				<div className='flex flex-col'>
-					<p>Quantity Here</p>
-					<button>Add To Cart</button>
-				</div>
+				<p className='self-center'>${productData.price}</p>
+				<ItemCartButton 
+					productId={productData.id}
+					quantity={quantity}
+					setCartItemQuantity={cartCallbacks.setCartItemQuantity} 
+					removeCartItem={cartCallbacks.removeCartItem} />
 			</div>
 		</div>
 	);

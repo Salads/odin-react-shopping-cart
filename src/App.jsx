@@ -36,7 +36,7 @@ function App() {
       });
   }, []);
 
-  function addOrUpdateCartItem(productId, quantity) {
+  function setCartItemQuantity(productId, quantity) {
     let cartItem = cartItems.find((elem) => elem.productId === productId);
     if(cartItem) {
       setTotalCartItems(totalCartItems + quantity - cartItem.quantity);
@@ -66,7 +66,7 @@ function App() {
     <div className='flex flex-col w-full min-h-dvh bg-zinc-200 px-8'>
       <Navbar totalCartItems={totalCartItems}></Navbar>
       <div className='flex flex-col flex-1 bg-purple-50'>
-        <Outlet context={[ products, cartItems, addOrUpdateCartItem, removeCartItem ]}/>
+        <Outlet context={{products, cartItems, setCartItemQuantity, removeCartItem}}/>
       </div>
       <Footer></Footer>
     </div>
