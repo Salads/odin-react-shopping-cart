@@ -19,9 +19,14 @@ import Footer from './components/Footer.jsx';
 
 function App() {
 
+  const [isLightTheme, setIsLightTheme] = useState(true);
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [totalCartItems, setTotalCartItems] = useState(0);
+
+  function toggleTheme() {
+    setIsLightTheme(!isLightTheme);
+  }
 
   useEffect(() => {
     let productData = [];
@@ -65,7 +70,7 @@ function App() {
 
   return (
     <div className='flex flex-col w-full min-h-dvh bg-zinc-200 px-8'>
-      <Navbar totalCartItems={totalCartItems}></Navbar>
+      <Navbar totalCartItems={totalCartItems} isLightTheme={isLightTheme} toggleTheme={toggleTheme}></Navbar>
       <div className='flex flex-col flex-1 bg-purple-50'>
         <Outlet context={{products, cartItems, setCartItemQuantity, removeCartItem}}/>
       </div>

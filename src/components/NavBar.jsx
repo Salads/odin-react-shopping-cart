@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 import CartButton from './CartButton.jsx';
+import ThemeToggle from "./ThemeToggle.jsx";
 
 function NavBar(props) {
 	
@@ -11,9 +12,9 @@ function NavBar(props) {
 				<Link to="shop" className="nav-underline">Shop</Link>
 				
 			</div>
-			<div className="flex gap-8">
+			<div className="flex gap-4 items-center">
 				<CartButton totalCartItems={props.totalCartItems}/>
-				<button>Toggle Theme</button>
+				<ThemeToggle isLightTheme={props.isLightTheme} toggleTheme={props.toggleTheme} />
 			</div>
 		</div>
 	);
