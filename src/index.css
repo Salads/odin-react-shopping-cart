@@ -36,3 +36,32 @@
 		box-shadow: none;
 	}
 }
+
+@utility btn-cart-shadow {
+
+	&:hover {
+		box-shadow: 2px 2px 5px grey;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+@utility btn-cart-new {
+	@apply btn-cart-shadow;
+	@apply px-4 py-0.5 w-fit h-fit cursor-pointer rounded-xl bg-amber-300;
+
+	&:hover {
+		@apply bg-amber-400;
+	}
+}
+
+@utility btn-cart-container {
+	@apply flex flex-row justify-between rounded-xl border px-3 py-0;
+	@apply bg-white;
+}
+
+@utility btn-cart-sub {
+	@apply size-6 self-center cursor-pointer;
+}
