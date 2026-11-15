@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Outlet  } from 'react-router';
-import './App.css'
 
 import Navbar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
@@ -43,14 +42,30 @@ function App() {
   }, []);
 
   function setCartItemQuantity(productId, quantity) {
-    let cartItem = cartItems.find((elem) => elem.productId === productId);
+    let cartItem = cartItems.find((elem) => elem.id === productId);
     if(cartItem) {
       setTotalCartItems(totalCartItems + quantity - cartItem.quantity);
       cartItem.quantity = quantity;
+
+      if(quantity <= 0) {
+        let newCartItems = cartItems.filter((elem) => elem.id !== productId);
+        setCartItems([...newCartItems]);
+      }
     }
     else {
-      setCartItems([...cartItems, { productId: productId, quantity: quantity }]);
-      setTotalCartItems(totalCartItems + quantity);
+      let productData = products.find((elem) => productId === elem.id);
+      if(productData) {
+        let cartItemData = {
+          id: productData.id,
+          title: productData.title,
+          image: productData.image,
+          price: productData.price,
+          quantity: quantity
+        }
+        setCartItems([...cartItems, cartItemData]);
+        setTotalCartItems(totalCartItems + quantity);
+      }
+      
     }
   }
 

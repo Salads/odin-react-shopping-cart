@@ -5,10 +5,14 @@ import ShopItem from '../components/ShopItem.jsx';
 
 function generateStoreItem(productData, cartItems, callbacks) {
 	let quantity = 0;
-	let cartItem = cartItems.find((elem) => elem.productId === productData.id);
+	let cartItem = cartItems.find((elem) => elem.id === productData.id);
 	if(cartItem) { quantity = cartItem.quantity; }
 
-	return <ShopItem key={productData.id} productData={productData} quantity={quantity} cartCallbacks={callbacks}/>
+	return <ShopItem 
+				key={productData.id} 
+				productData={productData} 
+				quantity={quantity} 
+				cartCallbacks={callbacks}/>
 }
 
 function ShopPage(props) {
