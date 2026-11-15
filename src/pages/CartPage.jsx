@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router";
+import { useOutletContext, Link } from "react-router";
 import CartItem from "../components/CartItem";
 
 function generateContents(cartItems, setCartItemQuantity, removeCartItem) {
@@ -29,6 +29,15 @@ function generateContents(cartItems, setCartItemQuantity, removeCartItem) {
 
 function CartPage() {
 	const {cartItems, setCartItemQuantity, removeCartItem} = useOutletContext();
+
+	if(cartItems.length <= 0) {
+		return (
+			<div className="flex flex-col flex-1 items-center justify-center w-full h-full gap-4">
+				<p className="w-fit h-fit text-center">No Items in Cart!</p>
+				<Link to="../shop"><button className="btn-primary">Back To Shop</button></Link>
+			</div>
+		);
+	}
 
 	let contents = generateContents(cartItems, setCartItemQuantity, removeCartItem);
 	
