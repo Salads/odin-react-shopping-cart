@@ -23,3 +23,12 @@
 		transform: scaleX(1);
 	}
 }
+
+@utility btn-primary {
+	@apply px-4 py-1 bg-sky-400 w-fit h-fit self-center rounded-md cursor-pointer;
+	
+	&:hover {
+		box-shadow: 2px 2px 5px grey;
+		@apply bg-sky-500
+	}
+}

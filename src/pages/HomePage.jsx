@@ -14,13 +14,7 @@ function HomePage() {
 					Nothing here yet! Click the button below to view the shop!
 				</p>
 				<Link to="shop">
-					<button className={`
-							bg-blue-400
-							px-3 py-1
-							rounded-md
-						`}>
-						Go To Shop
-					</button>
+					<button className="btn-primary">Go To Shop</button>
 				</Link>
 			</div>
 		</div>

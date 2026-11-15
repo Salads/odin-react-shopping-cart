@@ -48,7 +48,7 @@ function CartPage() {
 						<p className="text-2xl">${contents.totalPrice}</p>
 					</div>
 				</div>
-				<button className="px-4 py-1 bg-sky-400 w-fit h-fit self-center rounded-md cursor-pointer">Checkout</button>
+				<button className="btn-primary">Checkout</button>
 			</div>
 		</div>
 	);
