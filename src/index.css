@@ -31,4 +31,8 @@
 		box-shadow: 2px 2px 5px grey;
 		@apply bg-sky-500
 	}
+
+	&:active {
+		box-shadow: none;
+	}
 }
