@@ -67,7 +67,7 @@
 }
 
 @utility footer-section {
-	@apply text-2xl text-(--color-text-primary) cursor-default;
+	@apply text-2xl text-(--color-text-primary) cursor-default underline underline-offset-6 pb-3;
 }
 
 @utility footer-link {
