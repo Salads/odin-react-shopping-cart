@@ -8,10 +8,10 @@ function ShopItem({productData, quantity, cartCallbacks}) {
 	return (
 		<div className={`
 			flex flex-col items-center 
-			border-solid border-gray-400 border-2 rounded-xl
+			border-solid border-(--color-border) border-2 rounded-xl
 			max-w-96
 			px-8 py-4
-			bg-white
+			bg-(--color-item-background)
 			gap-4
 		`} data-id={productData.id}>
 			<img src={productData.image} className='h-48 w-auto'/>
@@ -25,7 +25,7 @@ function ShopItem({productData, quantity, cartCallbacks}) {
 				<p>{productData.category}</p>
 			</div>
 			<div className='flex-1'>
-				<p className='mb-6 line-clamp-4' title={productData.description}>{productData.description}</p>
+				<p className='mb-6 line-clamp-4 text-(--color-text-secondary)' title={productData.description}>{productData.description}</p>
 			</div>
 			<div className='flex flex-row items-end justify-between w-full'>
 				<p className='self-center'>${productData.price}</p>

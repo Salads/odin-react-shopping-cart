@@ -17,7 +17,7 @@ function ItemCartButton(props) {
 		return(
 			<button 
 				onClick={onClickAddToCart} 
-				className="btn-cart-shadow btn-cart-new">Add to Cart</button>
+				className="btn-cart-shadow btn-cart-new text-black">Add to Cart</button>
 		);
 	}
 
@@ -25,17 +25,17 @@ function ItemCartButton(props) {
 		internals = (
 			<>
 				<button className="btn-cart-sub" onClick={onClickSubtractFromCart}><img src={deleteSVG}/></button>
-				<p className='mx-8 cursor-default'>{props.quantity}</p>
-				<button  className="btn-cart-sub" onClick={onClickAddToCart}>+</button>
+				<p className='mx-8 cursor-default text-black'>{props.quantity}</p>
+				<button  className="btn-cart-sub text-black" onClick={onClickAddToCart}>+</button>
 			</>
 		);
 	}
 	else {
 		internals = (
 			<>
-				<button  className="btn-cart-sub" onClick={onClickSubtractFromCart}>-</button>
-				<p className='mx-8 cursor-default'>{props.quantity}</p>
-				<button  className="btn-cart-sub" onClick={onClickAddToCart}>+</button>
+				<button  className="btn-cart-sub text-black" onClick={onClickSubtractFromCart}>-</button>
+				<p className='mx-8 cursor-default text-black'>{props.quantity}</p>
+				<button  className="btn-cart-sub text-black" onClick={onClickAddToCart}>+</button>
 			</>
 		);
 	}

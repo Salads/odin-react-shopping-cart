@@ -25,11 +25,11 @@
 }
 
 @utility btn-primary {
-	@apply px-4 py-1 bg-sky-400 w-fit h-fit self-center rounded-md cursor-pointer;
+	@apply px-4 py-1 bg-(--color-button-primary) w-fit h-fit self-center rounded-md cursor-pointer;
 	
 	&:hover {
 		box-shadow: 2px 2px 5px grey;
-		@apply bg-sky-500
+		@apply bg-(--color-button-primary-hover)
 	}
 
 	&:active {
@@ -50,10 +50,10 @@
 
 @utility btn-cart-new {
 	@apply btn-cart-shadow;
-	@apply px-4 py-0.5 w-fit h-fit cursor-pointer rounded-xl bg-amber-300;
+	@apply px-4 py-0.5 w-fit h-fit cursor-pointer rounded-xl bg-(--color-button-cart-add);
 
 	&:hover {
-		@apply bg-amber-400;
+		@apply bg-(--color-button-cart-add-hover);
 	}
 }
 
@@ -64,4 +64,12 @@
 
 @utility btn-cart-sub {
 	@apply size-6 self-center cursor-pointer;
+}
+
+@utility footer-section {
+	@apply text-2xl text-(--color-text-primary) cursor-default;
+}
+
+@utility footer-link {
+	@apply nav-underline cursor-pointer w-fit;
 }

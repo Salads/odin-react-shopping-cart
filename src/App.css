@@ -1,0 +1,28 @@
+
+.light-theme {
+	--color-background: white;
+	--color-item-background: white;
+	--color-navbar-background: hsl(224, 76%, 64%);
+	--color-border: rgb(172, 172, 172);
+	--color-button-primary: hsl(199, 94%, 65%);
+	--color-button-primary-hover: hsl(199, 94%, 50%);
+	--color-text-primary: black;
+	--color-text-secondary: rgb(126, 125, 125);
+	--color-button-cart-add: rgb(255, 207, 50);
+	--color-button-cart-add-hover: rgb(245, 189, 4);
+	--color-button-cart-mod: white;
+}
+
+.dark-theme {
+	--color-background: black;
+	--color-navbar-background: hsl(224, 50%, 50%);
+	--color-item-background: rgb(43, 72, 88);
+	--color-border: grey;
+	--color-button-primary: rgb(0, 119, 255);
+	--color-button-primary-hover: rgb(4, 100, 211);
+	--color-text-primary: white;
+	--color-text-secondary: rgb(187, 187, 187);
+	--color-button-cart-add: rgb(255, 207, 50);
+	--color-button-cart-add-hover: rgb(245, 189, 4);
+	--color-button-cart-mod: white;
+}

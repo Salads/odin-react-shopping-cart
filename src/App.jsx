@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Outlet  } from 'react-router';
+import './App.css';
 
 import Navbar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
@@ -83,10 +84,12 @@ function App() {
     setCartItems(...newItems);
   }
 
+  let themeClass = isLightTheme ? "light-theme" : "dark-theme";
+
   return (
-    <div className='flex flex-col w-full min-h-dvh bg-zinc-200 px-8'>
+    <div className={`${themeClass} text-(--color-text-primary) flex flex-col w-full min-h-dvh bg-(--color-background)`}>
       <Navbar totalCartItems={totalCartItems} isLightTheme={isLightTheme} toggleTheme={toggleTheme}></Navbar>
-      <div className='flex flex-col flex-1 bg-purple-50'>
+      <div className='flex flex-col flex-1 bg-(--color-background)'>
         <Outlet context={{products, cartItems, setCartItemQuantity, removeCartItem}}/>
       </div>
       <Footer></Footer>

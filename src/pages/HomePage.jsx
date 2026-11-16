@@ -8,7 +8,7 @@ function HomePage() {
 					border-3 border-dashed rounded-xl
 					w-125 h-100 
 
-					border-zinc-200 
+					border-(--color-border)
 				`}>
 				<p>
 					Nothing here yet! Click the button below to view the shop!
