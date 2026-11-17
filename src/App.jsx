@@ -34,7 +34,7 @@ function App() {
       .then(response => response.json())
       .then(data => {
         for(let product of data) {
-          product.price = product.price.toFixed(2);
+          product.price = Number(product.price).toFixed(2);
           productData.push(product);
         }
 
