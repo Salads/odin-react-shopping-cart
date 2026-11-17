@@ -22,7 +22,7 @@ function CartButton(props){
 
 	return (
 
-		<Link to="cart" className='relative nav-underline'>
+		<Link to="cart" className='relative nav-underline' aria-label='Cart'>
 			<img src={cartSVG} className='size-6' />
 			{notiSticker}
 		</Link>

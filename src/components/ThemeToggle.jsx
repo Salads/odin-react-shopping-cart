@@ -19,7 +19,7 @@ function ThemeToggle(props) {
 			after:w-4 after:h-4
 			${knobShift}
 			after:bg-mist-200
-		`} onClick={props.toggleTheme}/>
+		`} onClick={props.toggleTheme} aria-label="ToggleTheme"/>
 	);
 }
 
