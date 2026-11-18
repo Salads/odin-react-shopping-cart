@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowJs": true,
+    "checkJs": false,
+    "types": ["vitest/globals", "@testing-library/jest-dom/vitest"]
+  },
+  "include": ["src/**/*", "tests/**/*", "vite.config.js"]
+}
