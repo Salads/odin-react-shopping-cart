@@ -13,22 +13,22 @@ function ShopItem({productData, quantity, cartCallbacks}) {
 			px-8 py-4
 			bg-(--color-item-background)
 			gap-4
-		`} data-id={productData.id}>
-			<img src={productData.image} className='h-48 w-auto'/>
+		`} data-id={productData.id} aria-label={`ShopItem ${productData.title}`}>
+			<img src={productData.image} aria-label='product image' className='h-48 w-auto'/>
 			<p className='text-center'>{productData.title}</p>
 			<div className='flex flex-row justify-around w-full'>
 				<div className='flex flex-row gap-1'>
-					<img src={ratingStar} className='size-4 self-center'/>
-					<p>{productData.rating.rate}</p>
-					<p>({productData.rating.count})</p>
+					<img src={ratingStar} className='size-4 self-center' data-testid="rating-img"/>
+					<p data-testid="rating-score">{productData.rating.rate}</p>
+					<p data-testid="rating-count">({productData.rating.count})</p>
 				</div>
-				<p>{productData.category}</p>
+				<p data-testid="category">{productData.category}</p>
 			</div>
 			<div className='flex-1'>
 				<p className='mb-6 line-clamp-4 text-(--color-text-secondary)' title={productData.description}>{productData.description}</p>
 			</div>
 			<div className='flex flex-row items-end justify-between w-full'>
-				<p className='self-center'>${productData.price}</p>
+				<p className='self-center' data-testid="product-price">${productData.price}</p>
 				<ItemCartButton 
 					productId={productData.id}
 					quantity={quantity}
