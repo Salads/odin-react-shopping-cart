@@ -7,7 +7,7 @@ function CartItem({item, setCartItemQuantity, removeCartItem}) {
 	return (
 		<div className="flex flex-row gap-8">
 			<div className="flex flex-row gap-4 flex-1">
-				<img src={item.image} className='w-12 h-auto' />
+				<img src={item.image} className='w-12 h-auto' data-testid="cart-item-image" />
 				<p>{item.title}</p>
 			</div>
 			<div className="flex flex-col">
