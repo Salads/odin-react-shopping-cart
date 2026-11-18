@@ -1,6 +1,6 @@
-import { describe, test, expect } from "vitest";
-import { render, screen } from  "@testing-library/react";
-import "@testing-library/jest-dom";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { createMemoryRouter, RouterProvider } from "react-router";
 
 import NavBar from "../src/components/NavBar";
 import { MemoryRouter } from "react-router";
