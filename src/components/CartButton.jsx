@@ -13,7 +13,7 @@ function CartButton(props){
 				items-center justify-center
 				rounded-full
 				p-1
-				bg-red-400
+				bg-red-500
 			`}>
 				<p className=''>{props.totalCartItems}</p>
 			</div>

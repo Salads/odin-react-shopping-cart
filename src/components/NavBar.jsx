@@ -7,7 +7,7 @@ function NavBar(props) {
 	
 	return (
 		<div className="flex justify-between px-24 py-3 sticky top-0 bg-(--color-navbar-background)">
-			<div className="flex gap-8">
+			<div className="flex gap-8 font-bold">
 				<Link to="/" className="nav-underline">Home</Link>
 				<Link to="shop" className="nav-underline">Shop</Link>
 			</div>

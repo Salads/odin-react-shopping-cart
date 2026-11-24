@@ -26,7 +26,8 @@
 
 @utility btn-primary {
 	@apply px-4 py-1 bg-(--color-button-primary) w-fit h-fit self-center rounded-md cursor-pointer;
-	
+	@apply font-bold;
+
 	&:hover {
 		box-shadow: 2px 2px 5px grey;
 		@apply bg-(--color-button-primary-hover)
